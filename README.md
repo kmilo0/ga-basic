@@ -1,3 +1,3 @@
-# Github Actions Basic
+# Basic example of Github Actions
 
-Basic example of github actions. Check [.github/workflows/deploy.yml](.github/workflows/deploy.yml)
+Check [.github/workflows/deploy.yml](.github/workflows/deploy.yml)
