@@ -37,10 +37,12 @@ jobs:
       - name: Test code
         id: run-tests
         run: npm run test
+      #This step will run when?
       - name: Upload test report
         # This test could be intentionally broken in src/components/MainContent.test.jsx line 23
         # failure() Returns true when any previous step of a job fails. If you have a chain of dependent jobs, failure() returns true if any ancestor job fails.
-        if: failure() && steps.run-tests.outcome == 'failure'
+        # if: failure() && steps.run-tests.outcome == 'failure'
+        if: steps.run-tests.outcome == 'failure'
         uses: actions/upload-artifact@v3
         with:
           name: test-report
