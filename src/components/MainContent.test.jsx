@@ -21,7 +21,7 @@ describe("MainContent", () => {
     await userEvent.click(button);
 
     // This test could be intentionally broken here
-    expect(screen.getByTestId("help-area")).toBeInTheDocument();
-    //expect(screen.getByTestId("breaking-the-test")).toBeInTheDocument();
+    // expect(screen.getByTestId("help-area")).toBeInTheDocument();
+    expect(screen.getByTestId("breaking-the-test")).toBeInTheDocument();
   });
 });
