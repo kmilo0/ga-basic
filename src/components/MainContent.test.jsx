@@ -20,8 +20,8 @@ describe("MainContent", () => {
     const button = screen.getByRole("button");
     await userEvent.click(button);
 
-    // Intentionally breaking the test
-    // expect(screen.getByTestId('help-area')).toBeInTheDocument();
-    expect(screen.getByTestId("breaking-the-test")).toBeInTheDocument();
+    // This test could be intentionally broken here
+    expect(screen.getByTestId("help-area")).toBeInTheDocument();
+    //expect(screen.getByTestId("breaking-the-test")).toBeInTheDocument();
   });
 });
